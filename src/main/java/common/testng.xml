@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ZApiTestNG Suite">
+
+    <listeners>
+        <listener class-name="listener.TestListener" />
+        <listener class-name="listener.MethodListener" />
+        <listener class-name="listener.RetryListener" />
+
+    </listeners>
+    <test name="TEST1">
+        <parameter name="first-name"  value="Wiley"/>
+        <packages>  
+            <package name="cases.user" />  <!-- name参数为必须 -->
+        </packages>
+    </test> <!-- YhApiCase -->
+    <test name="TEST2">
+        <packages>
+            <package name="cases.order" />  <!-- name参数为必须 -->
+        </packages>
+    </test> <!-- YhApiCase -->
+</suite> <!-- Default Suite -->
